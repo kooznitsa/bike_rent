@@ -1,0 +1,11 @@
+__pycache__/
+.idea/
+.git/
+venv/
+
+.gitignore
+.dockerignore
+
+Dockerfile
+celerybeat-schedule
+README.md
