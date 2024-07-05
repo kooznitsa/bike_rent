@@ -20,4 +20,4 @@ jobs:
           docker-compose up -d --build
 
       - name: Run Tests
-        run: docker exec -it backend poetry run pytest -v
+        run: docker exec backend poetry run pytest -v
