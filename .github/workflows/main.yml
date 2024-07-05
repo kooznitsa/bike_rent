@@ -12,9 +12,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: Run Docker Compose
-      run: docker-compose up -d --build
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Docker Compose
+        run: docker-compose up -d --build
 
-    - name: Run Tests
-      run: docker exec -it backend poetry run pytest -v
+      - name: Run Tests
+        run: docker exec -it backend poetry run pytest -v
