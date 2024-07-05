@@ -15,7 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run Docker Compose
-        run: docker-compose up -d --build
+        run: |
+          docker network create external-net
+          docker-compose up -d --build
 
       - name: Run Tests
         run: docker exec -it backend poetry run pytest -v
